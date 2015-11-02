@@ -16,7 +16,7 @@
 
 1. Scratch uses the 'Sensing' blocks to check if there is any input on the GPIO pins. If there is an input, the value of the pin changes from `0` to `1`. As you connected the PIR sensor to GPIO pin 4 of the Pi, we need to monitor that. Click on the drop-down menu on the `sensor value` block and choose `gpio4`.
 
-1. ick the check-box to the left of the block to display the pin value on screen.
+1. Tick the check-box to the left of the block to display the pin value on screen.
 
   ![Scratch sensing blocks](images/sensing-blocks.png)
 
