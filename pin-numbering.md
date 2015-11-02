@@ -20,4 +20,4 @@ Generally we recommend using the GPIO numbering. It's good practice and most res
 
 For more details on the advanced capabilities of the GPIO pins see gadgetoid's [interactive pinout diagram](http://pi.gadgetoid.com/pinout).
 
-[Back to the worksheet](worksheet.md)
+[Back to getting started with physical computing](worksheet.md)
