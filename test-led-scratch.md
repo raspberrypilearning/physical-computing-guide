@@ -1,6 +1,6 @@
-# Test a connected LED with Scratch
+# Testing a connected LED in Scratch
 
-1.  Launch the program **Scratch** by clicking on **Menu** followed by **Programming** and selecting **Scratch**. 
+1.  With your circuit complete, you are now ready to use Scratch to switch the LED on. Launch the program **Scratch** by clicking on **Menu** followed by **Programming** and selecting **Scratch**. 
 
  ![](images/scratch-icon.png)
 
