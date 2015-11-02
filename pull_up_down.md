@@ -36,7 +36,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
 
 1. Attach the female ends of the jumper wires to the Raspberry Pi GPIO pins as shown below. Take care to select the correct pins.
 
-  ![](../../../images/pull_up_wire.png)
+  ![](images/pull_up_wire.png)
 
 1. Go to the Linux command prompt, either Exit the desktop or open LX Terminal.
 1. Enter the command `nano pullup.py` and press Enter (nano is a text editor program).
@@ -82,7 +82,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
 
 1. Remove the jumper cables from the Raspberry Pi GPIO pins and reattach them as shown in the diagram below. Take care to select the correct pins.
 
-  ![](../../../images/pull_down_wire.png)
+  ![](images/pull_down_wire.png)
 
 1. The code required to test the pull down circuit is almost identical to that for the pull up so to save time we will just make a copy of your file and change one thing. Enter the command below (this takes a copy of `pullup.py` and saves it as `pulldown.py`):
 
