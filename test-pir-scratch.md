@@ -1,4 +1,4 @@
-## Test a PIR Montion Sensor in Scratch
+# Test a PIR Montion Sensor in Scratch
 
 Because we are using the GPIO pins, we need to run a special version of Scratch with comes pre-installed on Raspbian the free Raspberry Pi operating system. 
 
