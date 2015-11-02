@@ -1,4 +1,4 @@
-## Test the PIR motion sensor in Python
+# Test the PIR motion sensor in Python
 
 We're going to use the Python programming language to write some code that will detect movement and print out some text; we can extend the program to involve the camera board later on. When movement is detected the PIR motion sensor applies power to its OUT pin, which we have connected to GPIO pin 4 on the Pi. So in our code we just need to continually check pin 4 to see if it has power or not.
 
