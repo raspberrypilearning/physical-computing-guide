@@ -122,6 +122,7 @@ Jumper wires are used on breadboards to ‘jump’ from one connection to anothe
 
 There are three types of jumper wires:
 
+| | | |
 |:---|---|:---|
 | **Male to Male** | ![](images/jumper-male-to-male.png) | Both ends have a 'pin' that can be used with breadboards. |
 | **Male to Female** | ![](images/jumper-male-to-female.png) | The end with the ‘pin’ will go into a Breadboard. The end with the piece of plastic with a hole in it will go onto the Raspberry Pis GPIO pins. |
