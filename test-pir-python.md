@@ -8,57 +8,57 @@ The program is pretty simple. We will first set up the Raspberry Pi GPIO pins to
 
 We then use two Boolean (True or False) variables for the previous and current states of the pin, the previous state being what the current state was the preceding time around the loop. Inside the loop we compare the previous state to the current state to detect when they're different. We don't want to keep displaying a message if there has been no change.
 
-Firstly create a blank Python file with the following command:
+1. Firstly create a blank Python file with the following command:
 
-```bash
-nano pirtest.py
-```
+    ```bash
+    nano pirtest.py
+    ```
 
-Enter or copy and paste the code below:
+1. Enter or copy and paste the code below:
 
-```python
-import RPi.GPIO as GPIO
-import time
+    ```python
+    import RPi.GPIO as GPIO
+    import time
+    
+    sensor = 4
+    
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(sensor, GPIO.IN, GPIO.PUD_DOWN)
+    
+    previous_state = False
+    current_state = False
 
-sensor = 4
+    while True:
+        time.sleep(0.1)
+        previous_state = current_state
+        current_state = GPIO.input(sensor)
+        if current_state != previous_state:
+            new_state = "HIGH" if current_state else "LOW"
+            print("GPIO pin %s is %s" % (sensor, new_state))
+    ```
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(sensor, GPIO.IN, GPIO.PUD_DOWN)
+1. Press `Ctrl + O` to save and `Ctrl + X` to quit.
 
-previous_state = False
-current_state = False
+1. Now run the Python file:
 
-while True:
-    time.sleep(0.1)
-    previous_state = current_state
-    current_state = GPIO.input(sensor)
-    if current_state != previous_state:
-        new_state = "HIGH" if current_state else "LOW"
-        print("GPIO pin %s is %s" % (sensor, new_state))
-```
+    ```bash
+    sudo python3 pirtest.py
+    ```
 
-Press `Ctrl + O` to save and `Ctrl + X` to quit.
+1. If you get an error saying `RuntimeError: No access to /dev/mem` it means you forgot to use `sudo`. You must run programs that access the GPIO as root and `sudo` does this for you; to help remember you can think of it as 'super-user-do'.
 
-Now run the Python file:
+1. If you start moving or waving the sensor pin will go HIGH. Keep on waving and it will stay HIGH, and only go back to LOW if you keep still again. If you see the sensor behave like this, then everything is working correctly. If not, something is wrong and you need to go back and troubleshoot.
 
-```bash
-sudo python3 pirtest.py
-```
+    ```
+    GPIO pin 4 is HIGH
+    GPIO pin 4 is LOW
+    GPIO pin 4 is HIGH
+    ```
 
-If you get an error saying `RuntimeError: No access to /dev/mem` it means you forgot to use `sudo`. You must run programs that access the GPIO as root and `sudo` does this for you; to help remember you can think of it as 'super-user-do'.
+1. Press `Ctrl + C` when you want to exit.
 
-If you start moving or waving the sensor pin will go HIGH. Keep on waving and it will stay HIGH, and only go back to LOW if you keep still again. If you see the sensor behave like this, then everything is working correctly. If not, something is wrong and you need to go back and troubleshoot.
+    ![](images/pir_potentiometers.png)
 
-```
-GPIO pin 4 is HIGH
-GPIO pin 4 is LOW
-GPIO pin 4 is HIGH
-```
-
-Press `Ctrl + C` when you want to exit.
-
-![](images/pir_potentiometers.png)
-
-On the PIR module you should see two orange components with sockets that fit a Phillips screwdriver (see above). These are called *potentiometers*, and they allow you to adjust the sensitivity of the sensor and the detection time. I would suggest setting the sensitivity to max and the time to min, but the choice is yours.
+1. On the PIR module you should see two orange components with sockets that fit a Phillips screwdriver (see above). These are called *potentiometers*, and they allow you to adjust the sensitivity of the sensor and the detection time. I would suggest setting the sensitivity to max and the time to min, but the choice is yours.
 
 [Back to getting started with physical computing](worksheet.md)
