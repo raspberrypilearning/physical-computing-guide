@@ -44,3 +44,5 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
     If you're using a mini breadboard without a designated ground rail, you'll have to use one of the rows as the ground rail. Connect a row to a ground pin and the other points in that row will be connected to ground like so:
 
     ![](images/gpio-connect-ground-mini.png)
+
+[Back to getting started with physical computing](worksheet.md)
