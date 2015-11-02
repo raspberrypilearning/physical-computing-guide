@@ -25,13 +25,13 @@ Note that the numbering of the GPIO pins is rather weird. *Appendix 1: A note on
 
 You can program the pins to interact in amazing ways with the real world. Inputs don't have to come from a physical switch; it could be input from a sensor or a signal from another computer or device, for example. The output can also do anything, from turning on an LED to sending a signal or data to another device. If the Raspberry Pi is on a network, you can control devices that are attached to it from anywhere\*\* and those devices can send data back. Connectivity and control of physical devices over the internet is a powerful and exciting thing, and the Raspberry Pi is ideal for this. There are lots of brilliant examples of physical computing on [our blog](http://www.raspberrypi.org/blog/).
 
-*Note: Not* **literally** *anywhere, of course. You need things like access to the network, a network capable computing device, and electricity. Please do not write to us to point this out.*
+*Note: Not* **literally** *anywhere, of course. You need things like access to the network, a network capable computing device, and electricity.*
 
 ## How the GPIO pins work
 
 ### Output
 
-**WARNING**: If you follow the instructions, then messing about with the GPIO is safe and fun. Randomly plugging wires and power sources into your Pi, however, may kill it. Bad things can also happen if you try to connect things to your Pi that use a lot of power; LEDs are fine, motors are not. If you are worried about this, then you might want to consider using a breakout board such as the [Pibrella](http://pibrella.com/) until you are confident enough to use the GPIO directly.
+**WARNING**: If you follow the instructions, then messing about with the GPIO is safe and fun. Randomly plugging wires and power sources into your Pi, however, may kill it. Bad things can also happen if you try to connect things to your Pi that use a lot of power; LEDs are fine, motors are not. If you are worried about this, then you might want to consider using a breakout board such as the [Explorer HAT](https://shop.pimoroni.com/products/explorer-hat) until you are confident enough to use the GPIO directly.
 
 Ignoring the Pi for a moment, one of the simplest electrical circuits that you can build is a battery connected to a light source and a switch (the resistor is there to protect the LED):
 
@@ -50,15 +50,6 @@ The next step is to write a program to tell the pin to go HIGH or LOW. Here's an
 GPIO **outputs** are easy; they are on or off, HIGH or LOW, 3v3 or 0v. **Inputs** are a bit trickier because of the way that digital devices work. Although it might seem reasonable just to connect a button across an input pin and a ground pin, the Pi can get confused as to whether the button is on or off. It might work properly, it might not. It's a bit like floating about in deep space; without a reference it would be hard to tell if you were going up or down, or even what up or down meant!
 
 This is why you will see phrases like "pull up" and "pull down" in Raspberry Pi GPIO tutorials. It's a way of giving the input pin a reference so it knows for certain when an input is received.
-
-If you'd like to have a go at using the GPIO as an input then have a look at our [screaming jelly baby](http://www.raspberrypi.org/learning/screaming-jellybaby/) and [quick reaction game](http://www.raspberrypi.org/learning/quick-reaction-game/) tutorials for Python, or a [reaction game](http://www.raspberrypi.org/learning/reaction-game/) for Scratch.
-
-## The start of something amazing
-
-We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool please let us know. :)
-- [Raspberry Pi GPIO Introduction](gpio-plus-and-pi2.md)
-- [GPIO Pin Numbering](pin-numbering.md)
-- [Pull up and pull down resistors](pull_up_down.md)
 
 ## GPIO Pin Numbering
 
@@ -127,9 +118,9 @@ A push button will complete a circuit when the button is pressed.  What that mea
 ![](images/tactile-push-button.png)
 
 ## What is a PIR Motion Sensor?
-PIR stands for Passive Infra Red. You might have seen these before as they are very common these days. You would most often find them in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra red radiation. Infra red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
+PIR stands for Passive Infra-Red. You would most often find them in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra-red radiation. Infra-red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
 
-The sensor is regarded as passive because it doesn't send out any signal in order to detect movement. It adjusts itself to the infra red signature of the room it's in and then watches for any changes. Any object moving through the room will disturb the infra red signature, and will cause a change to be noticed by the PIR module.
+The sensor is regarded as passive because it doesn't send out any signal in order to detect movement. It adjusts itself to the infra-red signature of the room it's in and then watches for any changes. Any object moving through the room will disturb the infra-red signature, and will cause a change to be noticed by the PIR module.
 
 ![](images/pir_module.png)
 
@@ -138,6 +129,10 @@ We don't need to worry about its inner workings. What we're interested in are th
 - [Connecting a PIR sensor](connect-pir.md)
 - [Test a PIR sensor with Python](test-pir-python.md)
 - [Test a PIR sensor with Scratch](test-pir-scratch.md)
+
+## The start of something amazing
+
+We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool please let us know. :)
 
 ## Whats next?
 - Why not use your new found physical computing knowledge to complete one of our [make resources](https://www.raspberrypi.org/resources/make/).
