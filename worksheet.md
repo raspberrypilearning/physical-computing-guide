@@ -37,3 +37,6 @@ It is a way in which the Raspberry Pi can control and monitor the outside world 
 - [Connecting a PIR sensor](connect-pir.md)
 - [Test a PIR sensor with Python](test-pir-python.md)
 - [Test a PIR sensor with Scratch](test-pir-scratch.md)
+
+## Whats next?
+- Why not use your new found physical computing knowledge to complete one of our [make resources](https://www.raspberrypi.org/resources/make/).
