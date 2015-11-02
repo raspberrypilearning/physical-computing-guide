@@ -3,11 +3,11 @@
 - name: 1 x Tactile button
   img: tactile-push-button
 - name: 1 x PIR motion sensor
-  img: pir.png
+  img: pir
 - name: 1 x LED
-  img: led.png
+  img: led
 - name: 1 x 330 ohm resistor 
-  img: resistor-330r.png
+  img: resistor-330r
 - name: 2 x Male-to-female jumper leads
   img: jumper-male-to-female
 - name: 2 x Female-to-female jumper leads
