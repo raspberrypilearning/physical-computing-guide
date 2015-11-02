@@ -29,13 +29,13 @@ You can program the pins to interact in amazing ways with the real world. Inputs
 
 ### Output
 
-**WARNING**: If you follow the instructions, then messing about with the GPIO is safe and fun. Randomly plugging wires and power sources into your Pi, however, may kill it. Bad things can also happen if you try to connect things to your Pi that use a lot of power; LEDs are fine, motors are not. If you are worried about this, then you might want to consider using a breakout board such as the [Explorer HAT](https://shop.pimoroni.com/products/explorer-hat) until you are confident enough to use the GPIO directly.
+**WARNING**: If you follow the instructions, then messing about with the GPIO is safe and fun. Randomly plugging wires and power sources into your Pi, however, may kill it. Bad things can also happen if you try to connect things to your Pi that use a lot of power; LEDs are fine, motors are not. If you are worried about this, then you might want to consider using an add-on board such as the [Explorer HAT](https://shop.pimoroni.com/products/explorer-hat) until you are confident enough to use the GPIO directly.
 
 Ignoring the Pi for a moment, one of the simplest electrical circuits that you can build is a battery connected to a light source and a switch (the resistor is there to protect the LED):
 
 ![Simple circuit](images/simple-circuit.png)
 
-When we use a GPIO pin as an output, the Raspberry Pi replaces **both the switch and the battery** in the above diagram. Each pin can turn on or off,or go HIGH or LOW in computing terms. When the pin is HIGH it outputs 3.3 volts (3v3); when the pin is LOW it is off.
+When we use a GPIO pin as an output, the Raspberry Pi replaces **both the switch and the battery** in the above diagram. Each pin can turn on or off, or go HIGH or LOW in computing terms. When the pin is HIGH it outputs 3.3 volts (3v3); when the pin is LOW it is off.
 
 Here's the same circuit using the Raspberry Pi. The LED is connected to a GPIO pin (which can output +3v3) and a ground pin (which is 0v and acts like the negative terminal of the battery):
 
@@ -74,7 +74,7 @@ Generally we recommend using the GPIO numbering. It's good practice and most res
 For more details on the advanced capabilities of the GPIO pins see gadgetoid's [interactive pinout diagram](http://pi.gadgetoid.com/pinout).
 
 ### Pull Up and Pull Down Resistors
-When a GPIO pin is in input mode the pin is said to be floating, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between HIGH and LOW. We need to categorically know that the wires have touched. So we need to fix the voltage level to HIGH or LOW, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
+When a GPIO pin is in input mode and not connected to ground or 3v3, the pin is said to be floating, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between HIGH and LOW. We need to categorically know that the wires have touched. So we need to fix the voltage level to HIGH or LOW, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
 
 
 # Components
@@ -90,7 +90,7 @@ Along the sides of the breadboard are power and ground rails - these connect ver
 
 ## What is a resistor?
 
-Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called **Ohm (Ω)**, and the larger the resistance, the more it limits the current. 
+Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of *current* that is allowed to flow. The measure of resistance is called *Ohm (Ω)*, and the larger the resistance, the more it limits the current. 
 
 ![](images/resistor-330r.png)
 
@@ -102,7 +102,7 @@ You have to use resistors to connect LEDs up to the GPIO pins of the Raspberry P
 
 ![](images/led.png)
 
-LED stands for Light Emitting Diode, and glows when electricity is passed through it. When you pick up the LED, you will notice that one leg is longer than the other.The longer leg (known as the `anode`), is always connected to the positive supply of the circuit. The shorter leg (known as the `cathode`) is connected to the negative side of the power supply, known as `ground`.LEDs will only work if power is supplied the correct way round (i.e. if the `polarity` is correct).  You will not break the LEDs if you connect them the wrong way round, they simply will not glow.If you find that they do not light in your circuit, it may be because they have been connected the wrong way round.
+LED stands for Light Emitting Diode, and glows when electricity is passed through it. When you pick up the LED, you will notice that one leg is longer than the other.The longer leg (known as the *anode*), is always connected to the positive supply of the circuit. The shorter leg (known as the *cathode*) is connected to the negative side of the power supply, known as *ground*. LEDs will only work if power is supplied the correct way round (i.e. if the *polarity* is correct).  You will not break the LEDs if you connect them the wrong way round, they simply will not glow. If you find that they do not light in your circuit, it may be because they have been connected the wrong way round.
 
 **Why does the LED shine?**
 
