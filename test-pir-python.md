@@ -1,8 +1,8 @@
 # Test the PIR motion sensor in Python
 
-We're going to use the Python programming language to write some code that will detect movement and print out some text; we can extend the program to involve the camera board later on. When movement is detected the PIR motion sensor applies power to its OUT pin, which we have connected to GPIO pin 4 on the Pi. So in our code we just need to continually check pin 4 to see if it has power or not.
+We're going to use the Python programming language to write some code that will detect movement and print out some text. When movement is detected the PIR motion sensor applies power to its OUT pin, which we have connected to GPIO pin 4 on the Pi. So in our code we just need to continually check pin 4 to see if it has power or not.
 
-If a pin has power we call it HIGH and if not we call it LOW.
+If a pin has power we call it `HIGH` and if not we call it `LOW`.
 
 The program is pretty simple. We will first set up the Raspberry Pi GPIO pins to allow us to use pin 4 as an input; it can then detect when the PIR module sends power. We need to continually check the pin for any changes, so a `while True` loop is used for this. This is an infinite loop so the program will run continuously unless we stop it manually with `Ctrl + C`.
 
@@ -37,7 +37,7 @@ We then use two Boolean (True or False) variables for the previous and current s
             print("GPIO pin %s is %s" % (sensor, new_state))
     ```
 
-1. Press `Ctrl + O` to save and `Ctrl + X` to quit.
+1. Press `Ctrl + O` followed by enter to save and `Ctrl + X` to quit.
 
 1. Now run the Python file:
 
