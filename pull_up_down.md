@@ -8,13 +8,13 @@ We can do this in two ways:
 
   Wire the GPIO pin to 3.3 volts through a large 10kΩ resistor so that it always reads HIGH. Then we can short the pin to ground by touching the wires together so that the pin will go LOW.
 
-  ![](../../../images/pull_up.png)
+  ![](images/pull_up.png)
 
 - A pull down circuit
 
   Wire the GPIO pin to ground through a large 10kΩ resistor so that it always reads LOW. Then we can short the pin to 3.3 volts by touching the wires together so that it goes HIGH. When the wires touch there is a lower resistance path to 3.3 volts, and therefore the pin will read HIGH. 
 
-  ![](../../../images/pull_down.png)
+  ![](images/pull_down.png)
   
   *Note: The 1kΩ R2 resistor is there in both circuits to give the GPIO pin a fail-safe protection, in case we mistakenly set the pin to be in OUTPUT mode.*
 
