@@ -8,6 +8,7 @@ It is a way in which the Raspberry Pi can control and monitor the outside world 
 
 ## Worksheet
 - [Worksheet](worksheet.md)
+- [Glossary](glossary.md)
 
 ## Licence
 
