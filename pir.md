@@ -7,3 +7,5 @@ The sensor is regarded as passive because it doesn't send out any signal in orde
 ![](images/pir_module.png)
 
 We don't need to worry about its inner workings. What we're interested in are the three pins on it; we can connect those to the Raspberry Pi GPIO pins. One pin is for +5 volts, one pin is for ground and the other is the sensor pin (the middle pin on our Pi). This sensor pin will receive power whenever motion is detected by the PIR module. We can then see that happening on the Raspberry Pi and take action accordingly.
+
+[Back to getting started with physical computing](worksheet.md)
