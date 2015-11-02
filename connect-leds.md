@@ -1,4 +1,4 @@
-# Connecting and controlling an LED with Python
+# Connecting and controlling an LED with a Breadboard
 
 In this circuit, you will be connecting an LED to the GPIO header of your Raspberry Pi and using Python to turn it on and off.
 
