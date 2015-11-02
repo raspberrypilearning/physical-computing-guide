@@ -35,17 +35,17 @@ Ignoring the Pi for a moment, one of the simplest electrical circuits that you c
 
 ![Simple circuit](images/simple-circuit.png)
 
-When we use a GPIO pin as an output, the Raspberry Pi replaces *both the switch and the battery* in the above diagram. Each pin can turn on or off, or go HIGH or LOW in computing terms. When the pin is HIGH it outputs 3.3 volts (3v3); when the pin is LOW it is off.
+When we use a GPIO pin as an output, the Raspberry Pi replaces *both the switch and the battery* in the above diagram. Each pin can turn on or off, or go `HIGH` or `LOW` in computing terms. When the pin is `HIGH` it outputs 3.3 volts (3v3); when the pin is `LOW` it is off.
 
 Here's the same circuit using the Raspberry Pi. The LED is connected to a GPIO pin (which can output +3v3) and a ground pin (which is 0v and acts like the negative terminal of the battery):
 
 ![GPIO wth LED](images/gpio-led-pi2.png)
 
-The next step is to write a program to tell the pin to go HIGH or LOW. Here's an example using [Python](http://www.raspberrypi.org/learning/quick-reaction-game/) (see Step 2), and here's how to do it in [Scratch](http://www.raspberrypi.org/learning/robot-antenna/).
+The next step is to write a program to tell the pin to go `HIGH` or `LOW`. Here's an example using [Python](http://www.raspberrypi.org/learning/quick-reaction-game/) (see Step 2), and here's how to do it in [Scratch](http://www.raspberrypi.org/learning/robot-antenna/).
 
 ### Input
 
-GPIO *outputs* are easy; they are on or off, HIGH or LOW, 3v3 or 0v. *Inputs* are a bit trickier because of the way that digital devices work. Although it might seem reasonable just to connect a button across an input pin and a ground pin, the Pi can get confused as to whether the button is on or off. It might work properly, it might not. It's a bit like floating about in deep space; without a reference it would be hard to tell if you were going up or down, or even what up or down meant!
+GPIO *outputs* are easy; they are on or off, `HIGH` or `LOW`, 3v3 or 0v. *Inputs* are a bit trickier because of the way that digital devices work. Although it might seem reasonable just to connect a button across an input pin and a ground pin, the Pi can get confused as to whether the button is on or off. It might work properly, it might not. It's a bit like floating about in deep space; without a reference it would be hard to tell if you were going up or down, or even what up or down meant!
 
 This is why you will see phrases like "pull up" and "pull down" in Raspberry Pi GPIO tutorials. It's a way of giving the input pin a reference so it knows for certain when an input is received.
 
@@ -74,7 +74,7 @@ Generally we recommend using the GPIO numbering. It's good practice and most res
 For more details on the advanced capabilities of the GPIO pins see gadgetoid's [interactive pinout diagram](http://pi.gadgetoid.com/pinout).
 
 ### Pull Up and Pull Down Resistors
-When a GPIO pin is in input mode and not connected to ground or 3v3, the pin is said to be floating, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between HIGH and LOW. We need to categorically know that the wires have touched. So we need to fix the voltage level to HIGH or LOW, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
+When a GPIO pin is in input mode and not connected to ground or 3v3, the pin is said to be floating, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know that the wires have touched. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
 
 
 # Components
