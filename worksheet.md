@@ -124,7 +124,7 @@ When a circuit is plugged into the Raspberry Pi GPIO pins, electricity flows thr
 ## What is a push button?
 A push button will complete a circuit when the button is pressed.  What that means is that a current will not flow across the button until it is pressed.  When it is released, the circuit will be ‘broken’.
 
-![](images/push-button.png)
+![](images/tactile-push-button.png)
 
 ## What is a PIR Motion Sensor?
 PIR stands for Passive Infra Red. You might have seen these before as they are very common these days. You would most often find them in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra red radiation. Infra red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
