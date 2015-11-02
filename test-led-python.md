@@ -53,3 +53,4 @@
 
 1. It is now the moment of truth! Click on **run** and **run module** to execute (or run) your code. 
 
+[Back to getting started with physical computing](worksheet.md)
