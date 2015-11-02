@@ -59,8 +59,6 @@ You are going to connect your Raspberry Pi to a breadboard to allow you to build
 
 1. Now you need to complete the circuit in order for current to flow around it from the Raspberry Pi to light up the LED. To do this you are going to use another jumper wire.
 
-    *Jumper wires are used on breadboards to ‘jump’ from one connection to another.  The ones you will be using in this circuit have different connectors on each end.  The end with the ‘pin’ will go into the Breadboard.  The end with the piece of plastic with a hole in it will go onto the Raspberry Pi’s GPIO pins.*
-
     Take a red female to male jumper wire and connect the female end to `GPIO 18` on your Raspberry Pi. This is the pin located 3 pins down from where you connected the black jumper wire to a `GND` pin. Then push the male end of the jumper wire into a hole on the breadboard that lines up with the longer leg of the LED e.g. a3
 
     ![](images/gpio-complete-circuit.png)
