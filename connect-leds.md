@@ -65,4 +65,5 @@ You are going to connect your Raspberry Pi to a breadboard to allow you to build
 
     ![](images/gpio-complete-circuit.png)
 
+[Back to getting started with physical computing](worksheet.md)
 
