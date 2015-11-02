@@ -76,6 +76,8 @@ For more details on the advanced capabilities of the GPIO pins see gadgetoid's [
 ### Pull Up and Pull Down Resistors
 When a GPIO pin is in input mode the pin is said to be floating, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between HIGH and LOW. We need to categorically know that the wires have touched. So we need to fix the voltage level to HIGH or LOW, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
 
+--
+
 # Components
 
 ## What is a breadboard?
@@ -141,7 +143,7 @@ We don't need to worry about its inner workings. What we're interested in are th
 - [Test a PIR sensor with Python](test-pir-python.md)
 - [Test a PIR sensor with Scratch](test-pir-scratch.md)
 
-## The start of something amazing
+### The start of something amazing
 
 We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool please let us know. :)
 
