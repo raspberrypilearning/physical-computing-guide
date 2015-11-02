@@ -1,5 +1,16 @@
-- name: Cam Jam Edu Kit 1
-  img: 
-- name: Cam Jam Edu Kit 2
-  img: 
-
+- name: 1 x Solderless breadboard
+  img: breadboard
+- name: 1 x Tactile button
+  img: tactile-push-button
+- name: 1 x PIR motion sensor
+  img: pir.png
+- name: 1 x LED
+  img: led.png
+- name: 1 x 330 ohm resistor 
+  img: resistor-330r.png
+- name: 2 x Male-to-female jumper leads
+  img: jumper-male-to-female
+- name: 2 x Female-to-female jumper leads
+  img: jumper-female-to-female
+- name: 2 x Male-to-male jumper leads
+  img: jumper-male-to-male
