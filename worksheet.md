@@ -85,9 +85,9 @@ For more details on the advanced capabilities of the GPIO pins see gadgetoid's [
 ### Pull Up and Pull Down Resistors
 When a GPIO pin is in input mode the pin is said to be floating, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between HIGH and LOW. We need to categorically know that the wires have touched. So we need to fix the voltage level to HIGH or LOW, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
 
-## Components
+# Components
 
-### What is a breadboard?
+## What is a breadboard?
 You can think of a breadboard as being something like an artist's canvas, but without any of what we create on the canvas being permanent. Whilst it is possible to make a circuit without a breadboard, it keeps components organised rather than being a mess of wires without clear indication of how every wire connects to each other. Secondly, if you were to take a circuit and design it to fit on a PCB, a breadboard allows you to organise components logically before making the design permanent.
 
 ![](images/breadboard.png)
@@ -96,7 +96,7 @@ From an electronics perspective, horizontal lines of holes are connected togethe
 
 Along the sides of the breadboard are power and ground rails - these connect vertically instead of horizontally, and are used to tidy up the circuits by being a union point for any power connections. It's also safer this way, as all power can be disconnected from components by pulling the power source's connection to these rails, rather than pulling the connection to each individual component requiring power.
 
-### What is a resistor?
+## What is a resistor?
 
 Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called **Ohm (Ω)**, and the larger the resistance, the more it limits the current. 
 
@@ -106,7 +106,7 @@ The value of a resistor is marked with coloured bands along the length of the re
 
 You have to use resistors to connect LEDs up to the GPIO pins of the Raspberry Pi. The Raspberry Pi can only supply a small current (about 60mA). The LEDs will want to draw more, and if allowed to they will burn out the Raspberry Pi. Therefore putting the resistors in the circuit will ensure that only this small current will flow and the Pi will not be damaged. It does not matter which way round you connect the resistors. Current flows in both ways through them.
 
-### What is an LED?
+## What is an LED?
 
 ![](images/led.png)
 
@@ -116,23 +116,25 @@ LED stands for Light Emitting Diode, and glows when electricity is passed throug
 
 When a circuit is plugged into the Raspberry Pi GPIO pins, electricity flows through the circuit. The flow is called the current. The LED lights up only when electric current flows from the long leg through the bulb to the short leg. The resistor reduces the amount of electric current passing through the circuit. This protects the LED from breaking, as a high current will make the light shine more brightly and then stop working.
 
-### Inputs
-- [Connecting a push button](connecting-button.md)
- 
-### Outputs
-- [What is an LED?](led.md)
 - [Connecting LEDs without a breadboard](connect-led.md)
 - [Connecting an LED with a breadboard](connect-leds.md)
 - [Testing a connected LED in Python](test-led-python.md)
 - [Testing a connected LED in Scratch](test-led-scratch.md)
 
-## Motors
-- [What is a geared motor?]()
+## What is a push button?
+A push button will complete a circuit when the button is pressed.  What that means is that a current will not flow across the button until it is pressed.  When it is released, the circuit will be ‘broken’.
 
-## Sensors
+![](images/push-button.png)
 
-### Motion Sensors
-- [What is a PIR Motion Sensor?](pir.md)
+## What is a PIR Motion Sensor?
+PIR stands for Passive Infra Red. You might have seen these before as they are very common these days. You would most often find them in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra red radiation. Infra red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
+
+The sensor is regarded as passive because it doesn't send out any signal in order to detect movement. It adjusts itself to the infra red signature of the room it's in and then watches for any changes. Any object moving through the room will disturb the infra red signature, and will cause a change to be noticed by the PIR module.
+
+![](images/pir_module.png)
+
+We don't need to worry about its inner workings. What we're interested in are the three pins on it; we can connect those to the Raspberry Pi GPIO pins. One pin is for +5 volts, one pin is for ground and the other is the sensor pin (the middle pin on our Pi). This sensor pin will receive power whenever motion is detected by the PIR module. We can then see that happening on the Raspberry Pi and take action accordingly.
+
 - [Connecting a PIR sensor](connect-pir.md)
 - [Test a PIR sensor with Python](test-pir-python.md)
 - [Test a PIR sensor with Scratch](test-pir-scratch.md)
