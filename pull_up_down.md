@@ -1,43 +1,43 @@
 # Pull Up & Pull Down Resistors 
 
-When a GPIO pin is in input mode the pin is said to be *floating*, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between HIGH and LOW. We need to categorically know that the wires have touched. So we need to fix the voltage level to HIGH or LOW, and then make it change *only* when the we touch the wires together.
+When a GPIO pin is in input mode and not connected to 3v3 or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know that the wires have touched. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change *only* when the we touch the wires together.
 
 We can do this in two ways:
 
 - A pull up circuit
 
-  Wire the GPIO pin to 3.3 volts through a large 10kΩ resistor so that it always reads HIGH. Then we can short the pin to ground by touching the wires together so that the pin will go LOW.
+  Wire the GPIO pin to 3.3 volts through a large 10kΩ resistor so that it always reads `HIGH`. Then we can short the pin to ground by touching the wires together so that the pin will go `LOW`.
 
   ![](images/pull_up.png)
 
 - A pull down circuit
 
-  Wire the GPIO pin to ground through a large 10kΩ resistor so that it always reads LOW. Then we can short the pin to 3.3 volts by touching the wires together so that it goes HIGH. When the wires touch there is a lower resistance path to 3.3 volts, and therefore the pin will read HIGH. 
+  Wire the GPIO pin to ground through a large 10kΩ resistor so that it always reads `LOW`. Then we can short the pin to 3.3 volts by touching the wires together so that it goes `HIGH`. When the wires touch there is a lower resistance path to 3.3 volts, and therefore the pin will read `HIGH`. 
 
   ![](images/pull_down.png)
   
   *Note: The 1kΩ R2 resistor is there in both circuits to give the GPIO pin a fail-safe protection, in case we mistakenly set the pin to be in OUTPUT mode.*
 
 ### An Analogy
-> Image a gate to a field which has the smoothest hinges ever, the slightest knock, gently breeze or landing of an insect could move it.  
-> We'd never know whether the gate was being opened or closed as it could constantly swing gently between these two posistions.  
+> Imagine a gate to a field which has the smoothest hinges ever, the slightest knock, gentle breeze or landing of an insect could move it.  
+> We'd never know whether the gate was being opened or closed as it could constantly swing gently between these two positions.  
 > If we were to add a spring to the gate to pull it closed, the gate would be held in place, except for a deliberate push which could open it.
 >  
-> In this situation the Gate's position represents the Voltage which can fluctuate, the spring represents the resistor which fixes the voltage either **high** or **low**.
+> In this situation the gate's position represents the voltage which can fluctuate, the spring represents the resistor which fixes the voltage either `HIGH` or `LOW`.
 
 Fortunately, the Raspberry Pi has all the above circuitry built in. It can be helpful to imagine that the two resistors `R1` and `R2` from the diagrams above are *inside* the circuitry of the Raspberry Pi and they can be enabled or disabled as we desire. We can select either a pull up or a pull down *in our code* for each GPIO pin. 
 
 ### Pull up circuit
 
-Here we are going to use the internal pull up resistor to make GPIO 4 always read HIGH, then we will short it to ground through the wires so that it will read LOW when we touch the wires together.
+Here we are going to use the internal pull up resistor to make GPIO 4 always read `HIGH`, then we will short it to ground through the wires so that it will read `LOW` when we touch the wires together.
 
 *Note: The first 26 pins on a B+ are the same as those on a model A or B.*
 
-1. Attach the female ends of the jumper wires to the Raspberry Pi GPIO pins as shown below. Take care to select the correct pins.
+1. Using jumper wires, connect a push button to the Raspberry Pi GPIO pins as shown below. Take care to use the correct pins. If you don't have a push button, you can use two female-to-male jumper wires in order to manually make contact between ground and the input pin.
 
   ![](images/pull_up_wire.png)
 
-1. Go to the Linux command prompt, either Exit the desktop or open LX Terminal.
+1. Go to the Linux command prompt, by either exiting the desktop environment or opening LXTerminal.
 1. Enter the command `nano pullup.py` and press Enter (nano is a text editor program).
 1. Enter the code below.
   ```python
@@ -57,10 +57,10 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
   ```
 
 1. Press `Ctrl - O` then Enter to save, followed by `Ctrl - X` to quit from nano.
-1. Change the permissions of the program to make it executable by typing 'chmod 755 pullup.py`, follow by enter.
+1. Change the permissions of the program to make it executable by typing 'chmod 755 pullup.py`, followed by enter.
 1. Run the code by typing `sudo pullup.py` followed by enter.
 
-1. The text `LOW` should begin scrolling up the screen, when you hold the wires together (close the switch) for a few seconds you'll see the text `HIGH` because you're shorting the pin to 3.3 volts. Release the wires (open the switch) and it will return to `LOW` because of the internal pull *down* resistor.
+1. The text `HIGH` should begin scrolling up the screen. When you press the button (or connect the wires together) for a few seconds you'll see the text `LOW` because you're shorting the pin to ground. Release the button (or disconnect the wires) and it will return to `HIGH` because of the internal pull *up* resistor.
 
   ```
   HIGH
@@ -79,7 +79,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
 
 ### Pull down circuit
 
-1. Remove the jumper cables from the Raspberry Pi GPIO pins and reattach them as shown in the diagram below. Take care to select the correct pins.
+1. Remove the jumper cables from the Raspberry Pi GPIO pins and reattach them as shown in the diagram below. Take care to use the correct pins.
 
   ![](images/pull_down_wire.png)
 
@@ -91,7 +91,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
 
   `nano pulldown.py`
 
-1. Find the `GPIO.setup` line and change the last parameter from `GPIO.PUD_UP` to `GPIO.PUD_DOWN`. This sets the internal pull down resistor on GPIO 4 so that it will always read LOW. For example:
+1. Find the `GPIO.setup` line and change the last parameter from `GPIO.PUD_UP` to `GPIO.PUD_DOWN`. This sets the internal pull down resistor on GPIO 4 so that it will read `LOW` unless its connected to 3.3 volts. For example:
 
   `GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)`
 
@@ -99,7 +99,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
 1. The file doesn't need to be marked as executable with `chmod` since this property was copied from the original file. You can go ahead and run your code now, remember to use `sudo`:
 
   `sudo ./pulldown.py`
-1. The text `LOW` should begin scrolling up the screen, when you hold the wires together (close the switch) for a few seconds you'll see the text `HIGH` because you're shorting the pin to 3.3 volts. Release the wires (open the switch) and it will return to `LOW` because of the internal pull *down* resistor.
+1. The text `LOW` should begin scrolling up the screen, when you press the button (or connect the wires together) for a few seconds you'll see the text `HIGH` because you're shorting the pin to 3.3 volts. Release the button (or disconnect the wires) and it will return to `LOW` because of the internal pull *down* resistor.
 
   ```
   LOW
