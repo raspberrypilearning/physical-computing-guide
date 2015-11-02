@@ -18,7 +18,7 @@ We can do this in two ways:
   
   *Note: The 1kΩ R2 resistor is there in both circuits to give the GPIO pin a fail-safe protection, in case we mistakenly set the pin to be in OUTPUT mode.*
 
-## An Analogy
+### An Analogy
 > Image a gate to a field which has the smoothest hinges ever, the slightest knock, gently breeze or landing of an insect could move it.  
 > We'd never know whether the gate was being opened or closed as it could constantly swing gently between these two posistions.  
 > If we were to add a spring to the gate to pull it closed, the gate would be held in place, except for a deliberate push which could open it.
@@ -28,7 +28,7 @@ We can do this in two ways:
 
 Fortunately, the Raspberry Pi has all the above circuitry built in. It can be helpful to imagine that the two resistors `R1` and `R2` from the diagrams above are *inside* the circuitry of the Raspberry Pi and they can be enabled or disabled as we desire. We can select either a pull up or a pull down *in our code* for each GPIO pin. 
 
-## Pull up circuit
+### Pull up circuit
 
 Here we are going to use the internal pull up resistor to make GPIO 4 always read HIGH, then we will short it to ground through the wires so that it will read LOW when we touch the wires together.
 
@@ -78,7 +78,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
   HIGH
   ```
 
-## Pull down circuit
+### Pull down circuit
 
 1. Remove the jumper cables from the Raspberry Pi GPIO pins and reattach them as shown in the diagram below. Take care to select the correct pins.
 
