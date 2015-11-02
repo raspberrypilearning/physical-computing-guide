@@ -9,3 +9,5 @@ Connect the top one labelled `VCC` on the PIR sensor to the 5V pin on the Raspbe
 ![](images/pir_wiring.png)
 
 Now boot your Pi and log in.
+
+[Back to getting started with physical computing](worksheet.md)
