@@ -31,3 +31,5 @@
 1. Test your program again by clicking on the sprite. You should see the LED come on for 1 second and turn off for one second.
 
     ![](images/pin11off.png "Turn pin 11 off")
+
+[Back to getting started with physical computing](worksheet.md)
