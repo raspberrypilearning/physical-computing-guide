@@ -7,3 +7,5 @@ You can think of a breadboard as being something like an artist's canvas, but wi
 From an electronics perspective, horizontal lines of holes are connected together inside the breadboard by metal connections, with the components inside the holes clipping onto each connection. 
 
 Along the sides of the breadboard are power and ground rails - these connect vertically instead of horizontally, and are used to tidy up the circuits by being a union point for any power connections. It's also safer this way, as all power can be disconnected from components by pulling the power source's connection to these rails, rather than pulling the connection to each individual component requiring power.
+
+[Back to getting started with physical computing](worksheet.md)
