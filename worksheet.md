@@ -122,11 +122,10 @@ Jumper wires are used on breadboards to ‘jump’ from one connection to anothe
 
 There are three types of jumper wires:
 
-| | | |
-|---:|---|:---|
-| **Male to Male** | ![](images/jumper-male-to-male.png) | |
-| **Male to Female** | ![](images/jumper-male-to-female.png) | The end with the ‘pin’ will go into a Breadboard.The end with the piece of plastic with a hole in it will go onto the Raspberry Pi’s GPIO pins. |
-| **Female to female** | ![](images/jumper-female-to-female.png) | |
+|:---|---|:---|
+| **Male to Male** | ![](images/jumper-male-to-male.png) | Both ends have a 'pin' that can be used with breadboards. |
+| **Male to Female** | ![](images/jumper-male-to-female.png) | The end with the ‘pin’ will go into a Breadboard. The end with the piece of plastic with a hole in it will go onto the Raspberry Pis GPIO pins. |
+| **Female to female** | ![](images/jumper-female-to-female.png) | Both ends have a piece of plastic with a hole in it and can be used with Raspberry Pis GPIO pins and components. |
 
 ## What is a PIR Motion Sensor?
 PIR stands for Passive Infra-Red. You would most often find them in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra-red radiation. Infra-red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
