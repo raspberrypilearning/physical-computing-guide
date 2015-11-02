@@ -12,3 +12,5 @@ Scratch uses the 'Sensing' blocks to check if there is any input on the GPIO pin
 Test the PIR sensor by waving your hand in front of it. When it detects movement, the value on the screen should change from `0` to `1`.
 
 If the value doesn't change, check that the correct pins are connected.
+
+[Back to getting started with physical computing](worksheet.md)
