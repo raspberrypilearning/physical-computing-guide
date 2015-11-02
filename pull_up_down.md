@@ -1,6 +1,6 @@
 # Pull Up & Pull Down Resistors 
 
-When a GPIO pin is in input mode and not connected to 3v3 or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know that the wires have touched. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change *only* when the we touch the wires together.
+When a GPIO pin is in input mode and not connected to 3.3 volts or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know that the wires have touched. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change *only* when the we touch the wires together.
 
 We can do this in two ways:
 
@@ -29,9 +29,9 @@ Fortunately, the Raspberry Pi has all the above circuitry built in. It can be he
 
 ### Pull up circuit
 
-Here we are going to use the internal pull up resistor to make GPIO 4 always read `HIGH`, then we will short it to ground through the wires so that it will read `LOW` when we touch the wires together.
+Here we are going to use the internal pull up resistor to make GPIO 4 read `HIGH` by default, then we will short it to ground through the wires so that it will read `LOW` when we press the button or touch the wires together, completing the circuit.
 
-*Note: The first 26 pins on a B+ are the same as those on a model A or B.*
+*Note: If you have an older Raspberry Pi with only 26 pins, these pins will have the same assignments as the first 26 of the 40 pins on newer Raspberry Pis.*
 
 1. Using jumper wires, connect a push button to the Raspberry Pi GPIO pins as shown below. Take care to use the correct pins. If you don't have a push button, you can use two female-to-male jumper wires in order to manually make contact between ground and the input pin.
 
@@ -58,7 +58,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
 
 1. Press `Ctrl - O` then Enter to save, followed by `Ctrl - X` to quit from nano.
 1. Change the permissions of the program to make it executable by typing 'chmod 755 pullup.py`, followed by enter.
-1. Run the code by typing `sudo pullup.py` followed by enter.
+1. Run the code by typing `sudo ./pullup.py` followed by enter.
 
 1. The text `HIGH` should begin scrolling up the screen. When you press the button (or connect the wires together) for a few seconds you'll see the text `LOW` because you're shorting the pin to ground. Release the button (or disconnect the wires) and it will return to `HIGH` because of the internal pull *up* resistor.
 
@@ -76,6 +76,8 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
   HIGH
   HIGH
   ```
+
+1. Type `Ctrl - C` to terminate your Python script and return to the command line.
 
 ### Pull down circuit
 
@@ -115,5 +117,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 always rea
   LOW
   LOW
   ```
+
+1. Type `Ctrl - C` to terminate your Python script and return to the command line.
   
 [Back to the worksheet](worksheet.md)
