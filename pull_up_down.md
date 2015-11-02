@@ -1,18 +1,18 @@
 # Pull Up & Pull Down Resistors 
 
-When a GPIO pin is in input mode and not connected to 3.3 volts or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know that the wires have touched. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change *only* when the we touch the wires together.
+When a GPIO pin is in input mode and not connected to 3.3 volts or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know the state of the pin. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change *only* when, in the case of this guide, a button is pressed or a pair of wires are manually connected.
 
-We can do this in two ways:
+This can be done in two ways:
 
 - A pull up circuit
 
-  Wire the GPIO pin to 3.3 volts through a large 10kΩ resistor so that it always reads `HIGH`. Then we can short the pin to ground by touching the wires together so that the pin will go `LOW`.
+  Wire the GPIO pin to 3.3 volts through a large 10kΩ resistor so that it always reads `HIGH`. Then we can short the pin to ground by closing the circuit so that the pin will go `LOW`.
 
   ![](images/pull_up.png)
 
 - A pull down circuit
 
-  Wire the GPIO pin to ground through a large 10kΩ resistor so that it always reads `LOW`. Then we can short the pin to 3.3 volts by touching the wires together so that it goes `HIGH`. When the wires touch there is a lower resistance path to 3.3 volts, and therefore the pin will read `HIGH`. 
+  Wire the GPIO pin to ground through a large 10kΩ resistor so that it always reads `LOW`. Then we can short the pin to 3.3 volts by closing the circuit so that it goes `HIGH`. When the circuit is closed, there is a lower resistance path to 3.3 volts, and therefore the pin will read `HIGH`. 
 
   ![](images/pull_down.png)
   
@@ -93,7 +93,7 @@ Here we are going to use the internal pull up resistor to make GPIO 4 read `HIGH
 
   `nano pulldown.py`
 
-1. Find the `GPIO.setup` line and change the last parameter from `GPIO.PUD_UP` to `GPIO.PUD_DOWN`. This sets the internal pull down resistor on GPIO 4 so that it will read `LOW` unless its connected to 3.3 volts. For example:
+1. Find the `GPIO.setup` line and change the last parameter from `GPIO.PUD_UP` to `GPIO.PUD_DOWN`. This sets the internal pull down resistor on GPIO 4 so that it will read `LOW` unless it's connected to 3.3 volts. For example:
 
   `GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)`
 
