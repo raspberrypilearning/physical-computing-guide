@@ -50,4 +50,4 @@ If you'd like to have a go at using the GPIO as an input then have a look at our
 
 We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool please let us know. :)
 
-[Back to the worksheet](worksheet.md)
+[Back to getting started with physical computing](worksheet.md)
