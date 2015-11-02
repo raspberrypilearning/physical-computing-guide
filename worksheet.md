@@ -1,6 +1,6 @@
 # Getting Started with Physical Computing on the Raspberry Pi
 
-One powerful feature of the Raspberry Pi is the row of GPIO pins along the top edge of the board. GPIO stands for *General Purpose Input Output*. These pins are a physical interface between the Pi and the outside world. At the simplest level, you can think of them as switches that you can turn on or off (input) or that the Pi can turn on or off (output).
+One powerful feature of the Raspberry Pi is the row of GPIO pins along the top edge of the board. GPIO stands for **General Purpose Input Output**. These pins are a physical interface between the Pi and the outside world. At the simplest level, you can think of them as switches that you can turn on or off (input) or that the Pi can turn on or off (output).
 
 It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits. The Pi is able to control LEDs, turning them on or off, or motors, or many other things. It is also able to detect whether a switch has been pressed, or temperature, or light. We refer to this as **physical computing**.
 
@@ -35,7 +35,7 @@ Ignoring the Pi for a moment, one of the simplest electrical circuits that you c
 
 ![Simple circuit](images/simple-circuit.png)
 
-When we use a GPIO pin as an output, the Raspberry Pi replaces **both the switch and the battery** in the above diagram. Each pin can turn on or off, or go HIGH or LOW in computing terms. When the pin is HIGH it outputs 3.3 volts (3v3); when the pin is LOW it is off.
+When we use a GPIO pin as an output, the Raspberry Pi replaces *both the switch and the battery* in the above diagram. Each pin can turn on or off, or go HIGH or LOW in computing terms. When the pin is HIGH it outputs 3.3 volts (3v3); when the pin is LOW it is off.
 
 Here's the same circuit using the Raspberry Pi. The LED is connected to a GPIO pin (which can output +3v3) and a ground pin (which is 0v and acts like the negative terminal of the battery):
 
@@ -45,7 +45,7 @@ The next step is to write a program to tell the pin to go HIGH or LOW. Here's an
 
 ### Input
 
-GPIO **outputs** are easy; they are on or off, HIGH or LOW, 3v3 or 0v. **Inputs** are a bit trickier because of the way that digital devices work. Although it might seem reasonable just to connect a button across an input pin and a ground pin, the Pi can get confused as to whether the button is on or off. It might work properly, it might not. It's a bit like floating about in deep space; without a reference it would be hard to tell if you were going up or down, or even what up or down meant!
+GPIO *outputs* are easy; they are on or off, HIGH or LOW, 3v3 or 0v. *Inputs* are a bit trickier because of the way that digital devices work. Although it might seem reasonable just to connect a button across an input pin and a ground pin, the Pi can get confused as to whether the button is on or off. It might work properly, it might not. It's a bit like floating about in deep space; without a reference it would be hard to tell if you were going up or down, or even what up or down meant!
 
 This is why you will see phrases like "pull up" and "pull down" in Raspberry Pi GPIO tutorials. It's a way of giving the input pin a reference so it knows for certain when an input is received.
 
@@ -90,7 +90,7 @@ Along the sides of the breadboard are power and ground rails - these connect ver
 
 ## What is a resistor?
 
-Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of *current* that is allowed to flow. The measure of resistance is called *Ohm (Ω)*, and the larger the resistance, the more it limits the current. 
+Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called **Ohm (Ω)**, and the larger the resistance, the more it limits the current. 
 
 ![](images/resistor-330r.png)
 
@@ -102,7 +102,7 @@ You have to use resistors to connect LEDs up to the GPIO pins of the Raspberry P
 
 ![](images/led.png)
 
-LED stands for Light Emitting Diode, and glows when electricity is passed through it. When you pick up the LED, you will notice that one leg is longer than the other.The longer leg (known as the *anode*), is always connected to the positive supply of the circuit. The shorter leg (known as the *cathode*) is connected to the negative side of the power supply, known as *ground*. LEDs will only work if power is supplied the correct way round (i.e. if the *polarity* is correct).  You will not break the LEDs if you connect them the wrong way round, they simply will not glow. If you find that they do not light in your circuit, it may be because they have been connected the wrong way round.
+**LED** stands for **Light Emitting Diode**, and glows when electricity is passed through it. When you pick up the LED, you will notice that one leg is longer than the other.The longer leg (known as the **anode**), is always connected to the positive supply of the circuit. The shorter leg (known as the **cathode**) is connected to the negative side of the power supply, known as **ground**. LEDs will only work if power is supplied the correct way round (i.e. if the **polarity** is correct).  You will not break the LEDs if you connect them the wrong way round, they simply will not glow. If you find that they do not light in your circuit, it may be because they have been connected the wrong way round.
 
 **Why does the LED shine?**
 
@@ -130,7 +130,7 @@ Jumper wires are used on breadboards to ‘jump’ from one connection to anothe
 We use jumper wires to connect to the GPIO pins on the Raspberry Pi and breadboards. It's a really quick and simple way to get started making simple circuits. 
 
 ## What is a PIR Motion Sensor?
-PIR stands for Passive Infra-Red. You would most often find them in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra-red radiation. Infra-red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
+**PIR** stands for **Passive Infra-Red**. It's a type a of sensor that you would most often find in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra-red radiation. Infra-red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
 
 The sensor is regarded as passive because it doesn't send out any signal in order to detect movement. It adjusts itself to the infra-red signature of the room it's in and then watches for any changes. Any object moving through the room will disturb the infra-red signature, and will cause a change to be noticed by the PIR module.
 
