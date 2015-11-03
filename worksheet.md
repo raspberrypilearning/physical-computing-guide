@@ -17,7 +17,7 @@ Models A and B have only 26 pins and look like this:
 
 ![](images/gpio-pins.jpg)
 
-Note that the numbering of the GPIO pins is rather weird. *Appendix 1: A note on pin numbering*  below explains why.
+Note that the numbering of the GPIO pins is rather weird. Appendix 1, below, explains why.
 
 ## What are they for? What can I do with them?
 
