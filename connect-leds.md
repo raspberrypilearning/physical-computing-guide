@@ -4,7 +4,7 @@ In this circuit, you will be connecting an LED to the GPIO header of your Raspbe
 
 1. Begin by looking at the following GPIO diagram and compare it to your Raspberry Pi. 
 
-    GPIO stands for *General Purpose Input Output*. It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits.  The Pi is able to control LEDs, turning them on or off, or motors, or many other things.  It is also able to detect whether a switch has been pressed, or temperature, or light.
+    GPIO stands for General-Purpose Input/Output. It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits.  The Pi is able to control LEDs, motors, or many other things.  It is also able to detect whether a switch has been pressed, or changes in temperature or light levels.
 
     You'll be using a single ground pin (marked `GND`) and several GPIO pins (marked `GPIO`):
 
@@ -51,7 +51,7 @@ Using a breadboard allows you to connect electronic components to each other wit
 
 1. Locate a resistor and take a closer look at it.
 
-    Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of ***current*** that is allowed to flow.  The measure of resistance is called the Ohm (Ω), and the larger the resistance, the more it limits the current.  The value of a resistor is marked with coloured bands along the length of the resistor body. In this circuit a 330Ω should provide enough resistance so that too much current does not overpower the LED.
+    Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow.  The measure of resistance is called the Ohm (Ω), and the larger the resistance, the more it limits the current.  The value of a resistor is marked with coloured bands along the length of the resistor body. In this circuit a 330Ω should provide enough resistance so that too much current does not overpower the LED.
 
 1. Connect one leg of the 330Ω resistor into a hole on the ground rail and the other leg into hole on the breadboard that lines up to the shorter leg of your LED e.g. a2. It does not matter which way around the resistor goes. You will need to bend the legs of each of the resistors to fit, but please make sure that the wires of each leg do not cross each other.
 
