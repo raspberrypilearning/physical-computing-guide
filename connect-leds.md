@@ -35,7 +35,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
 You are going to connect your Raspberry Pi to a breadboard to allow you to build a circuit.
 
-Using a breadboard allows you to connect electronic components to each other without having to solder them together. They are often used to test a circuit design before creating a Printed Circuit Board (PCB). The holes on the breadboard are connected in a pattern. With the breadboard in the CamJam EduKit, the top row of holes, marked with red dots, are all connected together.  The second row of holes, marked with blue dots, are also connected together; we call this the ground rail.  The same goes for the two rows of holes at the bottom of the breadboard. In the middle, the columns of wires are connected together with a break in the middle.
+Using a breadboard allows you to connect electronic components to each other without having to solder them together. They are often used to test a circuit design before creating a Printed Circuit Board (PCB). The holes on the breadboard are connected in a pattern. On the breadboard in the CamJam EduKit the top row of holes, marked with red dots, are all connected together.  The second row of holes, marked with blue dots, are also connected together; we call this the ground rail.  The same goes for the two rows of holes at the bottom of the breadboard. In the middle, the columns of wires are connected together with a break in the middle.
 
 1. Take a black female to male jumper wire and connect the female end to a ground GPIO pin on the Raspberry Pi. Push the other end of the jumper wire into a hole on the ground rail on your breadboard like so:
 
