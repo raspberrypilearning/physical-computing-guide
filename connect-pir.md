@@ -1,6 +1,6 @@
 # Connecting a PIR Motion Sensor
 
-1. Before booting your Raspberry Pi, connect the PIR module to the Raspberry Pi.
+1. Before booting your Raspberry Pi, connect the Passive Infrared (PIR) module to the Raspberry Pi.
 
 1. Using three female-to-female jumper cables, you'll need to connect each of the PIR sensor's connectors to the appropriate pins on the Raspberry Pi.
 
