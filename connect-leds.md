@@ -41,9 +41,9 @@ Using a breadboard allows you to connect electronic components to each other wit
 
     ![](images/gpio-connect-ground.png)
 
-1. Now take a red LED and have a look at it. Note which leg is longer than the other.
+1. Now take a red LED and have a look at it. Note that one leg is longer than the other.
 
-    LED stands for Light Emitting Diode. An LED glows when electricity is passed through it. It has one leg longer than the other. This is important as it tells us which way round the LED should be placed into a circuit in order for the current to flow through it and make it work. The longer leg (known as the **anode**), is always connected to the positive supply of the circuit. The shorter leg (known as the **cathode**) is connected to the negative side of the power supply, known as **ground**.
+    LED stands for Light Emitting Diode. An LED glows when electricity is passed through it. As we noted above, LEDs have one leg which is longer than the other. This is important as it tells us which way round the LED should be placed into a circuit in order for the current to flow through it and make it work. The longer leg (known as the **anode**), is always connected to the positive supply of the circuit. The shorter leg (known as the **cathode**) is connected to the negative side of the power supply, known as **ground**.
 
 1. Push the long leg of the LED into a hole on the 'E' row of the breadboard, e.g. E3, and the shorter leg into a hole next to it on the same row, e.g. E2, like this:
 
@@ -51,9 +51,9 @@ Using a breadboard allows you to connect electronic components to each other wit
 
 1. Locate a resistor and take a closer look at it.
 
-    Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called the ohm (Ω); the larger the resistance, the more it limits the current. The value of a resistor is denoted by coloured bands along the length of the resistor body. In this circuit, a 330Ω should provide enough resistance so that too much current does not overpower the LED.
+    Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called the ohm (Ω); the larger the resistance, the more the current is limited. The value of a resistor is denoted by coloured bands along the length of the resistor body. In this circuit, a 330Ω resistor should provide enough resistance so that the current does not overpower the LED.
 
-1. Connect one leg of the 330Ω resistor into a hole on the ground rail and the other leg into hole on the breadboard that lines up to the shorter leg of your LED, e.g. A2. It does not matter which way around the resistor goes. You will need to bend the legs of each of the resistors to fit, but make sure that the wires of each leg do not cross each other.
+1. Connect one leg of the 330Ω resistor into a hole on the ground rail and the other leg into a hole on the breadboard that lines up to the shorter leg of your LED, e.g. A2. It does not matter which way around the resistor goes. You will need to bend the legs of the resistor to fit, but make sure that the wires of each leg do not cross each other.
 
     ![](images/gpio-connect-resistor.png)
 
