@@ -35,9 +35,9 @@ In this example you are going to use the internal pull up resistor to make GPIO 
 
   ![](images/pull_up_wire.png)
 
-1. Open a Python3 from the main menu.
+1. Open Idle3 from the main menu.
 
-![Open Python3]()
+![Open Idle3](images/open_idle.png)
 
 1. Create a new program from the **File** -> **New Window** option
 
@@ -53,11 +53,11 @@ In this example you are going to use the internal pull up resistor to make GPIO 
   GPIO.setup(pin, GPIO.IN, GPIO.PUD_UP)
 
   while True:
-      pin_value = GPIO.input(pin)
-      if pin_value = GPIO.HIGH:
-        print "HIGH"
+      button_state = GPIO.input(button)
+      if button_state == GPIO.HIGH:
+        print ("HIGH")
       else:
-        print "LOW"
+        print ("LOW")
       time.sleep(0.5)
   ```
 
@@ -67,7 +67,7 @@ In this example you are going to use the internal pull up resistor to make GPIO 
 
 1. The text `HIGH` should begin scrolling up the screen. When you press the button (or connect the wires together) for a few seconds you'll see the text `LOW` because you're shorting the pin to ground. Release the button (or disconnect the wires) and it will return to `HIGH` because of the internal pull *up* resistor.
 
-![Pull Up Logic](pull_up_screenshot.png)
+![Pull Up Logic](images/pull_up_screenshot.png)
 
 1. Press `Ctrl - C` to terminate your Python script at any time.
 
@@ -87,7 +87,7 @@ In this example you are going to use the internal pull up resistor to make GPIO 
 
 1. The text `LOW` should begin scrolling up the screen, when you press the button (or connect the wires together) for a few seconds you'll see the text `HIGH` because you're shorting the pin to 3.3 volts. Release the button (or disconnect the wires) and it will return to `LOW` because of the internal pull *down* resistor.
 
-  ![Pull Down Logic](pull_down_screenshot.png)
+  ![Pull Down Logic](images/pull_down_screenshot.png)
 
 1. Type `Ctrl - C` to terminate your Python script and return to the command line.
 
