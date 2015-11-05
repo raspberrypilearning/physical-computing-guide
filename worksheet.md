@@ -9,7 +9,7 @@ Models A+, B+ and Pi 2 have 40 pins that look like this:
 
 ![GPIO pins](images/gpio-pins-pi2.jpg)
 
-These pins are a physical interface between the Pi and the outside world. At the simplest level, you can think of them as switches that you can turn on or off (input) or that the Pi can turn on or off (output). Of the 40 pins, 26 are GPIO pins and the others are power or ground pins (plus two ID EEPROM pins which you should not play with unless you know your stuff!)
+These pins are a physical interface between the Raspberry Pi and the outside world. You can program the Raspberry Pi to switch devices on and off (output), or receive data from sensors and switches (input) . Of the 40 pins, 26 are GPIO pins and the others are power or ground pins (plus two ID EEPROM pins which you should not play with unless you know your stuff!)
 
 ![GPIO layout](images/gpio-numbers-pi2.png)
 
@@ -51,11 +51,11 @@ This is why you will see phrases like "pull up" and "pull down" in Raspberry Pi 
 
 ## GPIO Pin Numbering
 
-When programming the GPIO pins there are two different ways to refer to them: GPIO numbering and physical numbering. 
+When programming the GPIO pins there are two different ways to refer to them: GPIO numbering and physical numbering.
 
 ### GPIO numbering
 
-These are the GPIO pins as the computer sees them. The numbers don't make any sense to humans, they jump about all over the place, so there is no easy way to remember them. However, you can use a printed reference or a reference board that fits over the pins to help you out. 
+These are the GPIO pins as the computer sees them. The numbers don't make any sense to humans, they jump about all over the place, so there is no easy way to remember them. However, you can use a printed reference or a reference board that fits over the pins to help you out.
 
 ![GPIO layout](images/gpio-numbers-pi2.png)
 
@@ -67,7 +67,7 @@ The other way to refer to the pins is by simply counting across and down from pi
 
 ### Which system should I use?
 
-Beginners and young children may find the physical numbering system simpler -- you simply count the pins. You'll still need a diagram like the one above to know which are GPIO pins, which are ground and which are power though. 
+Beginners and young children may find the physical numbering system simpler -- you simply count the pins. You'll still need a diagram like the one above to know which are GPIO pins, which are ground and which are power though.
 
 Generally we recommend using the GPIO numbering. It's good practice and most resources use this system. Take your pick though -- as long as you use the same system within a program then all will be well. Note that pin numbering can also depend on what programming language you are using.
 
@@ -84,17 +84,21 @@ You can think of a breadboard as being something like an artist's canvas, but wi
 
 ![](images/breadboard.png)
 
-From an electronics perspective, horizontal lines of holes are connected together inside the breadboard by metal connections, with the components inside the holes clipping onto each connection. 
+From an electronics perspective, horizontal lines of holes are connected together inside the breadboard by metal connections, with the components inside the holes clipping onto each connection.
 
 Along the sides of the breadboard are power and ground rails - these connect vertically instead of horizontally, and are used to tidy up the circuits by being a union point for any power connections. It's also safer this way, as all power can be disconnected from components by pulling the power source's connection to these rails, rather than pulling the connection to each individual component requiring power.
 
+The name breadboard comes from the the fact that engineers in the past would prototype circuits on bits of wood. Often these bits of wood would be breadboards they'd pinch from the kitchen!
+
+![Early Breadboard](images/early_breadboard.jpg)
+
 ## What is a resistor?
 
-Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called **Ohm (Ω)**, and the larger the resistance, the more it limits the current. 
+Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called **Ohm (Ω)**, and the larger the resistance, the more it limits the current.
 
 ![](images/resistor-330r.png)
 
-The value of a resistor is marked with coloured bands along the length of the resistor body. A commonly used resistor in LED projects has the resistance value of a 330Ω. You can identify the 330Ω resistors by the colour bands along the body. The colour coding will depend on how many bands are on the resistors supplied: If there are four colour bands, they will be Orange, Orange, Brown, and then Gold. If there are five bands, then the colours will be Orange, Orange, Black, Black, Brown. 
+The value of a resistor is marked with coloured bands along the length of the resistor body. A commonly used resistor in LED projects has the resistance value of a 330Ω. You can identify the 330Ω resistors by the colour bands along the body. The colour coding will depend on how many bands are on the resistors supplied: If there are four colour bands, they will be Orange, Orange, Brown, and then Gold. If there are five bands, then the colours will be Orange, Orange, Black, Black, Brown.
 
 You have to use resistors to connect LEDs up to the GPIO pins of the Raspberry Pi. The Raspberry Pi can only supply a small current (about 60mA). The LEDs will want to draw more, and if allowed to they will burn out the Raspberry Pi. Therefore putting the resistors in the circuit will ensure that only this small current will flow and the Pi will not be damaged. It does not matter which way round you connect the resistors. Current flows in both ways through them.
 
@@ -127,7 +131,7 @@ Jumper wires are used on breadboards to ‘jump’ from one connection to anothe
 | **Male to Female** | ![](images/jumper-male-to-female.png) | The end with the ‘pin’ will go into a Breadboard. The end with the piece of plastic with a hole in it will go onto the Raspberry Pis GPIO pins. |
 | **Female to female** | ![](images/jumper-female-to-female.png) | Both ends have a piece of plastic with a hole in it and can be used with Raspberry Pis GPIO pins and components. |
 
-We use jumper wires to connect to the GPIO pins on the Raspberry Pi and breadboards. It's a really quick and simple way to get started making simple circuits. 
+We use jumper wires to connect to the GPIO pins on the Raspberry Pi and breadboards. It's a really quick and simple way to get started making simple circuits.
 
 ## What is a PIR Motion Sensor?
 **PIR** stands for **Passive Infra-Red**. It's a type a of sensor that you would most often find in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra-red radiation. Infra-red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
