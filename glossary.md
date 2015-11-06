@@ -2,11 +2,11 @@
 
 ## GPIO
 
-General purpose input/output; in this specific case the pins on the Raspberry Pi and what you can do with them. So called because you can use them for all sorts of purposes; most can be used as either inputs or outputs, depending on your program.
+General-purpose input/output; in this specific case, GPIO refers to the pins on the Raspberry Pi and what you can do with them. So called because you can use them for all sorts of purposes; most can be used as either inputs or outputs, depending on your program.
 
 ## LED
 
-Light-emitting diode- a small, low-power light source used widely in electronics. Ideal as an introduction to physical computing on the Pi.
+Light-emitting diode: a small, low-power light source used widely in electronics. Ideal as an introduction to physical computing on the Pi.
 
 ## Physical computing
 
