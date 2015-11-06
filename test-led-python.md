@@ -1,16 +1,12 @@
 # Testing a connected LED in Python
 
-1. With your circuit complete, you are now ready to write some code to switch the LED on. Boot your Raspberry Pi, login and type `startx`.
+1. With your circuit complete, you are now ready to write some code to switch the LED on. 1. Open Idle3 from the main menu.
 
-1. Click on the **Terminal** application icon on the taskbar or click on the **Menu** followed by **Accessories** and then select **Terminal** with your mouse pointer. The icon for **Terminal** looks like this:
+![Open Idle3](images/open_idle.png)
 
-    ![](images/terminal-icon.png)
+1. Create a new program from the **File** -> **New Window** option
 
-    Once loaded type `sudo idle3 &` and press enter on the keyboard. This will load the Python 3 programming environment called `IDLE3` as the super user which allows you to create a program that affects the GPIO pins. Once loaded click on **File** and **New File**.
-
-1. In the new window, save the file by clicking on **File** and **Save As...** Name your file `led-on-off.py`.
-
-1. Next type the following code:
+1. Enter the code below.
 
     ```python
     import time
@@ -18,7 +14,7 @@
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
 
-    led = 18
+    led = 17
 
     GPIO.setup(led,GPIO.OUT)
     ```
@@ -37,7 +33,7 @@
 1. The code so far will turn on the LED; let's add some code to turn it off after a period of time. Below type:
 
     ```python
-    time.sleep(3)
+    time.sleep(1)
     print("Light off")
     GPIO.output(led,GPIO.LOW)
     ```

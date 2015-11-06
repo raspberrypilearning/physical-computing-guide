@@ -8,23 +8,23 @@ The program is pretty simple. We will first set up the Raspberry Pi GPIO pins to
 
 We then use two Boolean (True or False) variables for the previous and current states of the pin, the previous state being what the current state was the preceding time around the loop. Inside the loop we compare the previous state to the current state to detect when they're different. We don't want to keep displaying a message if there has been no change.
 
-1. Firstly create a blank Python file with the following command:
+1. Open Idle3 from the main menu.
 
-    ```bash
-    nano pirtest.py
-    ```
+![Open Idle3](images/open_idle.png)
 
-1. Enter or copy and paste the code below:
+1. Create a new program from the **File** -> **New Window** option
+
+1. Enter the code below.
 
     ```python
     import RPi.GPIO as GPIO
     import time
-    
+
     sensor = 4
-    
+
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(sensor, GPIO.IN, GPIO.PUD_DOWN)
-    
+
     previous_state = False
     current_state = False
 
@@ -37,15 +37,9 @@ We then use two Boolean (True or False) variables for the previous and current s
             print("GPIO pin %s is %s" % (sensor, new_state))
     ```
 
-1. Press `Ctrl + O` followed by enter to save and `Ctrl + X` to quit.
+1. Press `Ctrl + S` and enter a sensible name for the file.
 
-1. Now run the Python file:
-
-    ```bash
-    sudo python3 pirtest.py
-    ```
-
-1. If you get an error saying `RuntimeError: No access to /dev/mem` it means you forgot to use `sudo`. You must run programs that access the GPIO as root and `sudo` does this for you; to help remember you can think of it as 'super-user-do'.
+1. Now run the Python file by press the **F5** key.
 
 1. If you start moving or waving the sensor pin will go HIGH. Keep on waving and it will stay HIGH, and only go back to LOW if you keep still again. If you see the sensor behave like this, then everything is working correctly. If not, something is wrong and you need to go back and troubleshoot.
 
