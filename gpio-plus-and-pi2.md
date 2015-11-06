@@ -30,7 +30,7 @@ Ignoring the Pi for a moment, one of the simplest electrical circuits that you c
 
 ![Simple circuit](images/simple-circuit.png)
 
-When we use a GPIO pin as an output, the Raspberry Pi replaces **both the switch and the battery** in the above diagram. Each pin can turn on or off,or go HIGH or LOW in computing terms. When the pin is HIGH it outputs 3.3 volts (3v3); when the pin is LOW it is off.
+When we use a GPIO pin as an output, the Raspberry Pi replaces **both the switch and the battery** in the above diagram. Each pin can turn on or off, or go HIGH or LOW in computing terms. When the pin is HIGH, it outputs 3.3 volts (3v3); when the pin is LOW, it is off.
 
 Here's the same circuit using the Raspberry Pi. The LED is connected to a GPIO pin (which can output +3v3) and a ground pin (which is 0v and acts like the negative terminal of the battery):
 
@@ -48,6 +48,6 @@ If you'd like to have a go at using the GPIO as an input then have a look at our
 
 ## The start of something amazing
 
-We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool please let us know. :)
+We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool, please let us know. 
 
 [Back to getting started with physical computing](worksheet.md)
