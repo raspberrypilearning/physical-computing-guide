@@ -22,7 +22,7 @@ With your circuit complete, you are now ready to write some code to switch the L
     ```
     The first two lines tells the Python interpreter (the thing that runs the Python code) that it will be using a ‘library’. You will need the `time` library in order to add timings to your program and the `RPi.GPIO` library that will tell the Pi how to work with the Raspberry Pi’s GPIO pins. A ‘library’ gives a programming language extra commands that can be used to do something different that it previously did not know how to do. This is like adding a new channel to your TV so you can watch something different. Each pin on the Pi has several different names, so you need to tell the program which naming convention is to be used in the third line of the code. The second to last line tells Python not to print GPIO warning messages to the screen. The final line tells Python to set up pin 18 as an output.
 
-1. Underneath type:
+1. Underneath the code you have just entered, type:
 
     ```python
     print("Light on")
