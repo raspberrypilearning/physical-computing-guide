@@ -32,14 +32,14 @@ With your circuit complete, you are now ready to write some code to switch the L
 
     The next line turns the GPIO pin 18 ‘on’. What this actually means is that this pin is made to provide power of 3.3 volts. This is enough to turn the LED in your circuit on.
 
-1. The code so far will turn on the LED; let's add some code to turn it off after a period of time. Below type:
+1. The code so far will turn on the LED; let's add some code to turn it off after a period of time. Below your existing code, type:
 
     ```python
     time.sleep(1)
     print("Light off")
     GPIO.output(led,GPIO.LOW)
     ```
-    The first line adds a pause or sleep. It tells the program to sleep for 3 seconds before moving onto the next line in the sequence of code. During this time your LED will be on because you have not told it to do anything else yet. To turn the LED off, you add a line similar to the one that turned GPIO pin 18 on, instead you replace GPIO.HIGH with GPIO.LOW. This will turn the pin off so that it no longer supplies any voltage.
+    The first line adds a pause or sleep. It tells the program to sleep for one second before moving onto the next line in the sequence of code. During this time your LED will be on because you have not told it to do anything else yet. To turn the LED off, you add a line similar to the one that turned GPIO pin 18 on, instead you replace GPIO.HIGH with GPIO.LOW. This will turn the pin off so that it no longer supplies any voltage.
 
 1. The final part to add to your program is:
 
