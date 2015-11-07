@@ -39,9 +39,9 @@ We then use two Boolean (True or False) variables for the previous and current s
 
 1. Press `Ctrl + S` and enter a sensible name for the file.
 
-1. Now run the Python file by press the **F5** key.
+1. Now run the Python file by pressing the **F5** key.
 
-1. If you start moving or waving the sensor pin will go HIGH. Keep on waving and it will stay HIGH, and only go back to LOW if you keep still again. If you see the sensor behave like this, then everything is working correctly. If not, something is wrong and you need to go back and troubleshoot.
+1. If you start moving or waving the sensor pin will go HIGH. Keep on waving and it will stay HIGH, and it will only go back to LOW if you keep still again. If you see the sensor behave like this, then everything is working correctly. If not, something is wrong and you need to go back and troubleshoot.
 
     ```
     GPIO pin 4 is HIGH
@@ -55,4 +55,4 @@ We then use two Boolean (True or False) variables for the previous and current s
 
 1. On the PIR module you should see two orange components with sockets that fit a Phillips screwdriver (see above). These are called *potentiometers*, and they allow you to adjust the sensitivity of the sensor and the detection time. I would suggest setting the sensitivity to max and the time to min, but the choice is yours.
 
-[Back to getting started with physical computing](worksheet.md)
+Back to [Getting started with physical computing](worksheet.md)
