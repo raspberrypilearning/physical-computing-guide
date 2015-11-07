@@ -12,7 +12,7 @@
 
 1. Drag a `broadcast` block to your scripts area and attach it to the ![Green Flag](images/green_flag.png) block. Click on the drop down menu on the broadcast block and select **new**.
 
-    In the message name box type `gpioserveron` This instruction will tell the Scratch to activate its gpio functions.
+    In the message name box type `gpioserveron` This instruction will tell the Scratch to activate its GPIO functions.
 
 1. Drag another `broadcast` block to your scripts area and attach it to the bottom. Click on the drop down menu on the broadcast block and select **new**.
 
