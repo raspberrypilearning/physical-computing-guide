@@ -43,7 +43,7 @@ The next step is to write a program to tell the pin to go `HIGH` or `LOW`. Here'
 
 ### Input
 
-GPIO *outputs* are easy; they are on or off, `HIGH` or `LOW`, 3v3 or 0v. *Inputs* are a bit trickier because of the way that digital devices work. Although it might seem reasonable just to connect a button across an input pin and a ground pin, the Pi can get confused as to whether the button is on or off. It might work properly, it might not. It's a bit like floating about in deep space; without a reference it would be hard to tell if you were going up or down, or even what up or down meant!
+GPIO **outputs** are easy; they are on or off, `HIGH` or `LOW`, 3v3 or 0v. **Inputs** are a bit trickier because of the way that digital devices work. Although it might seem reasonable just to connect a button across an input pin and a ground pin, the Pi can get confused as to whether the button is on or off. It might work properly, it might not. It's a bit like floating about in deep space; without a reference it would be hard to tell if you were going up or down, or even what up or down meant!
 
 This is why you will see phrases like "pull up" and "pull down" in Raspberry Pi GPIO tutorials. It's a way of giving the input pin a reference so it knows for certain when an input is received.
 
@@ -65,20 +65,19 @@ The other way to refer to the pins is by simply counting across and down from pi
 
 ### Which system should I use?
 
-Beginners and young children may find the physical numbering system simpler -- you simply count the pins. You'll still need a diagram like the one above to know which are GPIO pins, which are ground and which are power though.
+Beginners and young children may find the physical numbering system simpler: you simply count the pins. You'll still need a diagram like the one above to know which are GPIO pins, which are ground, and which are power though.
 
-Generally we recommend using the GPIO numbering. It's good practice and most resources use this system. Take your pick though -- as long as you use the same system within a program then all will be well. Note that pin numbering can also depend on what programming language you are using.
+Generally we recommend using the GPIO numbering. It's good practice and most resources use this system. Take your pick though: as long as you use the same system within a program then all will be well. Note that pin numbering can also depend on what programming language you are using.
 
-For more details on the advanced capabilities of the GPIO pins see gadgetoid's [interactive pinout diagram](http://pi.gadgetoid.com/pinout).
+For more details on the advanced capabilities of the GPIO pins see Gadgetoid's [interactive pinout diagram](http://pi.gadgetoid.com/pinout).
 
 ### Pull Up and Pull Down Resistors
-When a GPIO pin is in input mode and not connected to ground or 3v3, the pin is said to be floating, meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know that the wires have touched. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
-
+When a GPIO pin is in input mode and not connected to ground or 3v3, the pin is said to be 'floating', meaning that it has no fixed voltage level. That's no good for what we want, as the pin will randomly float between `HIGH` and `LOW`. We need to categorically know that the wires have touched. So we need to fix the voltage level to `HIGH` or `LOW`, and then make it change only when the we touch the wires together. You can learn more about pull up and pull down resistors in [this guide](pull_up_down.md).
 
 # Components
 
 ## What is a breadboard?
-You can think of a breadboard as being something like an artist's canvas, but without any of what we create on the canvas being permanent. Whilst it is possible to make a circuit without a breadboard, it keeps components organised rather than being a mess of wires without clear indication of how every wire connects to each other. Secondly, if you were to take a circuit and design it to fit on a PCB, a breadboard allows you to organise components logically before making the design permanent.
+You can think of a breadboard as being something like an artist's canvas, but without any of what we create on the canvas being permanent. While it is possible to make a circuit without a breadboard, it keeps components organised rather than being a mess of wires without clear indication of how every wire connects to each other. Secondly, if you were to take a circuit and design it to fit on a PCB, a breadboard allows you to organise components logically before making the design permanent.
 
 ![](images/breadboard.png)
 
@@ -92,19 +91,19 @@ The name breadboard comes from the the fact that engineers in the past would pro
 
 ## What is a resistor?
 
-Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is called **Ohm (Ω)**, and the larger the resistance, the more it limits the current.
+Resistors are a way of limiting the amount of electricity going through a circuit; specifically, they limit the amount of **current** that is allowed to flow. The measure of resistance is the **Ohm (Ω)**, and the larger the resistance, the more it limits the current.
 
 ![](images/resistor-330r.png)
 
-The value of a resistor is marked with coloured bands along the length of the resistor body. A commonly used resistor in LED projects has the resistance value of a 330Ω. You can identify the 330Ω resistors by the colour bands along the body. The colour coding will depend on how many bands are on the resistors supplied: If there are four colour bands, they will be Orange, Orange, Brown, and then Gold. If there are five bands, then the colours will be Orange, Orange, Black, Black, Brown.
+The value of a resistor is marked with coloured bands along the length of the resistor body. A resistor commonly used in LED projects has the resistance value of a 330Ω. You can identify the 330Ω resistors by the colour bands along the body. The colour coding will depend on how many bands are on the resistors supplied: If there are four colour bands, they will be orange, orange, brown, and then gold. If there are five bands, then the colours will be orange, orange, black, black, brown.
 
-You have to use resistors to connect LEDs up to the GPIO pins of the Raspberry Pi. The Raspberry Pi can only supply a small current (about 60mA). The LEDs will want to draw more, and if allowed to they will burn out the Raspberry Pi. Therefore putting the resistors in the circuit will ensure that only this small current will flow and the Pi will not be damaged. It does not matter which way round you connect the resistors. Current flows in both ways through them.
+You have to use resistors to connect LEDs up to the GPIO pins of the Raspberry Pi. The Raspberry Pi can only supply a small current (about 60mA). The LEDs will want to draw more, and if allowed to they will burn out the Raspberry Pi. Therefore putting the resistors in the circuit will ensure that only this small current will flow and the Pi will not be damaged. It does not matter which way round you connect the resistors. Current flows in both directions through them.
 
 ## What is an LED?
 
 ![](images/led.png)
 
-**LED** stands for **Light Emitting Diode**, and glows when electricity is passed through it. When you pick up the LED, you will notice that one leg is longer than the other.The longer leg (known as the **anode**), is always connected to the positive supply of the circuit. The shorter leg (known as the **cathode**) is connected to the negative side of the power supply, known as **ground**. LEDs will only work if power is supplied the correct way round (i.e. if the **polarity** is correct).  You will not break the LEDs if you connect them the wrong way round, they simply will not glow. If you find that they do not light in your circuit, it may be because they have been connected the wrong way round.
+**LED** stands for **Light Emitting Diode**. An LED glows when electricity is passed through it. When you pick up the LED, you will notice that one leg is longer than the other.The longer leg (known as the **anode**), is always connected to the positive supply of the circuit. The shorter leg (known as the **cathode**) is connected to the negative side of the power supply, known as **ground**. LEDs will only work if power is supplied the correct way round (i.e. if the **polarity** is correct).  You will not break the LEDs if you connect them the wrong way round, but they will not glow. If you find that they do not light in your circuit, it may be because they have been connected the wrong way round.
 
 **Why does the LED shine?**
 
@@ -116,7 +115,7 @@ When a circuit is plugged into the Raspberry Pi GPIO pins, electricity flows thr
 - [Testing a connected LED in Scratch](test-led-scratch.md)
 
 ## What is a push button?
-A push button will complete a circuit when the button is pressed.  What that means is that a current will not flow across the button until it is pressed.  When it is released, the circuit will be ‘broken’.
+A push button will complete a circuit when the button is pressed. What that means is that a current will not flow across the button until it is pressed. When it is released, the circuit will be ‘broken’.
 
 ![](images/tactile-push-button.png)
 
@@ -132,9 +131,9 @@ Jumper wires are used on breadboards to ‘jump’ from one connection to anothe
 We use jumper wires to connect to the GPIO pins on the Raspberry Pi and breadboards. It's a really quick and simple way to get started making simple circuits.
 
 ## What is a PIR Motion Sensor?
-**PIR** stands for **Passive Infra-Red**. It's a type a of sensor that you would most often find in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infra-red radiation. Infra-red wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
+**PIR** stands for **Passive Infrared**. It's a type of sensor that you would most often find in the corners of rooms for burglar alarm systems. All objects whose temperatures are above absolute zero emit infrared radiation. Infrared wavelengths are not visible to the human eye, but they can be detected by the electronics inside one of these modules.
 
-The sensor is regarded as passive because it doesn't send out any signal in order to detect movement. It adjusts itself to the infra-red signature of the room it's in and then watches for any changes. Any object moving through the room will disturb the infra-red signature, and will cause a change to be noticed by the PIR module.
+The sensor is regarded as passive because it doesn't send out any signal in order to detect movement. It adjusts itself to the infrared signature of the room it is in and then watches for any changes. Any object moving through the room will disturb the infrared signature, and will cause a change to be noticed by the PIR module.
 
 ![](images/pir_module.png)
 
@@ -147,5 +146,5 @@ We don't need to worry about its inner workings. What we're interested in are th
 ## What next?
 
 ### The start of something amazing
-We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool please let us know. 
+We hope that this has encouraged you to have a go at physical computing using the Pi's GPIO; it's really not as daunting as it looks. It all starts with a simple LED, but it can take you to incredible places. Do not underestimate the fun, creativity, and sense of achievement you can get from a little computer and a bunch of pins. Have fun! And if you do make something cool please let us know. 
 - Why not use your new found physical computing knowledge to complete one of our [make resources](https://www.raspberrypi.org/resources/make/)?
