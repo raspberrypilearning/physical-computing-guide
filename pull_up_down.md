@@ -61,7 +61,7 @@ In this example you are going to use the internal pull up resistor to make GPIO 
 
 1. Run your program by press the **F5** key
 
-1. The text `HIGH` should begin scrolling up the screen. When you press the button (or connect the wires together) for a few seconds you'll see the text `LOW` because you're shorting the pin to ground. Release the button (or disconnect the wires) and it will return to `HIGH` because of the internal pull *up* resistor.
+1. The text `HIGH` should begin scrolling up the screen. When you press the button (or connect the wires together) for a few seconds you'll see the text `LOW` because you're shorting the pin to ground. Release the button (or disconnect the wires) and it will return to `HIGH` because of the internal pull up resistor.
 
   ![Pull Up Logic](images/pull_up_screenshot.png)
 
