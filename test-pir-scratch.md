@@ -2,7 +2,7 @@
 
 1.  With your PIR circuit complete, you are now ready to use Scratch to sense for motion. Launch the program **Scratch** by clicking on **Menu** followed by **Programming** and selecting **Scratch**.
 
- *Note: Our version of Scratch on Raspbian is extra special. It allows you to access and control the GPIO pins.*
+ Our version of Scratch on Raspbian is extra special. It allows you to access and control the GPIO pins.
 
 1.  Click on **control** in the top left display. Drag the ![Green Flag](images/green_flag.png) block onto the scripts area.
 
@@ -24,4 +24,4 @@
 
 1. If the value doesn't change, check that the correct pins are connected.
 
-[Back to getting started with physical computing](worksheet.md)
+Back to [Getting started with physical computing](worksheet.md)
