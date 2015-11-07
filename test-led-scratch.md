@@ -4,7 +4,7 @@
 
  ![](images/scratch-icon.png)
 
- *Note: Our version of Scratch on Raspbian is extra special. It allows you to access and control the GPIO pins.*
+ Our version of Scratch on Raspbian is extra special. It allows you to access and control the GPIO pins.
 
     ![](images/Scratch-interface.png "The Scratch Interface")
 
@@ -12,7 +12,7 @@
 
 1. Drag a `broadcast` block to your scripts area and attach it to the ![Green Flag](images/green_flag.png) block. Click on the drop down menu on the broadcast block and select **new**.
 
-    In the message name box type `gpioserveron` This instruction will tell the Scratch to activate it's gpio functions.
+    In the message name box type `gpioserveron` This instruction will tell the Scratch to activate its gpio functions.
 
 1. Drag another `broadcast` block to your scripts area and attach it to the bottom. Click on the drop down menu on the broadcast block and select **new**.
 
@@ -22,7 +22,7 @@
 
 1. Drag another `broadcast` block to your scripts area and attach it to the bottom of first broadcast block. Click on the drop down menu on the broadcast block and select **new**.
 
-    In the message name box type `gpio17on` This instruction will tell the Raspberry Pi to set GPIO pin 18 `HIGH`.
+    In the message name box type `gpio17on` This instruction will tell the Raspberry Pi to set GPIO pin 17 `HIGH`.
 
 1. Drag a `wait 1 secs` block onto the scripts area and connect it to the previous broadcast block.
 
@@ -36,4 +36,4 @@
 
     ![](images/scratch_complete.png)
 
-[Back to getting started with physical computing](worksheet.md)
+Back to [Getting started with physical computing](worksheet.md)
