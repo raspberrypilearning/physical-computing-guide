@@ -1,4 +1,4 @@
-# Pull Up & Pull Down Resistors
+# Pull Up and Pull Down Resistors
 
 When a GPIO pin is in input mode and not connected to 3.3 volts or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what you want, as the pin will randomly float between `HIGH` and `LOW`. You need to categorically know the state of the pin. So you need to fix the voltage level to `HIGH` or `LOW`, and then make it change **only** when (in the case of this guide) a button is pressed or a pair of wires are manually connected.
 
