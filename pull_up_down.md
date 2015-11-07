@@ -1,6 +1,6 @@
 # Pull Up & Pull Down Resistors
 
-When a GPIO pin is in input mode and not connected to 3.3 volts or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what you want, as the pin will randomly float between `HIGH` and `LOW`. You need to categorically know the state of the pin. So you need to fix the voltage level to `HIGH` or `LOW`, and then make it change *only* when (in the case of this guide) a button is pressed or a pair of wires are manually connected.
+When a GPIO pin is in input mode and not connected to 3.3 volts or ground, the pin is said to be **floating**, meaning that it has no fixed voltage level. That's no good for what you want, as the pin will randomly float between `HIGH` and `LOW`. You need to categorically know the state of the pin. So you need to fix the voltage level to `HIGH` or `LOW`, and then make it change **only** when (in the case of this guide) a button is pressed or a pair of wires are manually connected.
 
 This can be done in two ways:
 
@@ -16,7 +16,7 @@ This can be done in two ways:
 
   ![](images/pull_down.png)
 
-  *Note: The 1kΩ R2 resistor is there in both circuits to give the GPIO pin a fail-safe protection, in case we mistakenly set the pin to be in OUTPUT mode.*
+  Note: The 1kΩ R2 resistor is there in both circuits to give the GPIO pin a fail-safe protection, in case we mistakenly set the pin to be in OUTPUT mode.
 
 ### An Analogy
 > Imagine a gate to a field which has the smoothest hinges ever, the slightest knock, gentle breeze or landing of an insect could move it.  
