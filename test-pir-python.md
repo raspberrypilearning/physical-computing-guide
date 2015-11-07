@@ -51,8 +51,8 @@ We then use two Boolean (True or False) variables for the previous and current s
 
 1. Press `Ctrl + C` when you want to exit.
 
-    ![](images/pir_potentiometers.png)
+1. ![](images/pir_potentiometers.png)
 
-1. On the PIR module you should see two orange components with sockets that fit a Phillips screwdriver (see above). These are called *potentiometers*, and they allow you to adjust the sensitivity of the sensor and the detection time. I would suggest setting the sensitivity to max and the time to min, but the choice is yours.
+    On the PIR module, you should see two orange components with sockets that fit a Phillips screwdriver (see above). These are called potentiometers, and they allow you to adjust the sensitivity of the sensor and the detection time. We would suggest setting the sensitivity to maximum and the time to minimum, but the choice is yours.
 
 Back to [Getting started with physical computing](worksheet.md)
