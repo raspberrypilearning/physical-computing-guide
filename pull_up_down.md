@@ -19,13 +19,9 @@ This can be done in two ways:
   Note: The 1kΩ R2 resistor is there in both circuits to give the GPIO pin a fail-safe protection, in case we mistakenly set the pin to be in OUTPUT mode.
 
 ### An Analogy
-> Imagine a gate to a field which has the smoothest hinges ever, the slightest knock, gentle breeze or landing of an insect could move it.  
-> You'd never know whether the gate was being opened or closed as it could constantly swing gently between these two positions.  
-> If you were to add a spring to the gate to pull it closed, the gate would be held in place, except for a deliberate push which could open it.
->  
-> In this situation the gate's position represents the voltage which can fluctuate, the spring represents the resistor which fixes the voltage either `HIGH` or `LOW`.
+Imagine a gate to a field which has the smoothest hinges ever, the slightest knock, gentle breeze or landing of an insect could move it. You'd never know whether the gate was being opened or closed as it could constantly swing gently between these two positions. If you were to add a spring to the gate to pull it closed, the gate would be held in place, except for a deliberate push which could open it. In this situation the gate's position represents the voltage which can fluctuate, the spring represents the resistor which fixes the voltage either `HIGH` or `LOW`.
 
-Fortunately, the Raspberry Pi has all the above circuitry built in. It can be helpful to imagine that the two resistors `R1` and `R2` from the diagrams above are *inside* the circuitry of the Raspberry Pi and they can be enabled or disabled as needed. You can select either a pull up or a pull down *in your code* for each GPIO pin.
+Fortunately, the Raspberry Pi has all the above circuitry built in. It can be helpful to imagine that the two resistors `R1` and `R2` from the diagrams above are inside the circuitry of the Raspberry Pi and they can be enabled or disabled as needed. You can select either a pull up or a pull down in your code for each GPIO pin.
 
 ### Pull up circuit
 
