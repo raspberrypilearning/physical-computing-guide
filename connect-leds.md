@@ -2,7 +2,7 @@
 
 In this circuit, you are going to connect your Raspberry Pi to a breadboard to allow you to connect multiple LEDs.
 
-Using a breadboard allows you to connect electronic components to each other without having to solder them together. They are often used to test a circuit design before creating a Printed Circuit Board (PCB). The holes on the breadboard are connected in a pattern. On the breadboard in the CamJam EduKit, the left hand column of holes (marked with red dots) are all connected together, this is the **live**. The second column (marked with blue dots) are also connected together; we call this the **ground** rail. There is another seperate pair of on the other side of the breadboard. In the middle, the holes are connected together in rows of 5 with a break in the middle.
+Using a breadboard allows you to connect electronic components to each other without having to solder them together. They are often used to test a circuit design before creating a Printed Circuit Board (PCB). The holes on the breadboard are connected in a pattern. On the breadboard in the CamJam EduKit, the left hand column of holes (marked with a red line) are all connected together, this is the **live**. The second column (marked with a blue line) are also connected together; we call this the **ground** rail. There is another seperate pair of on the other side of the breadboard. In the middle, the holes are connected together in rows of 5 with a break in the middle.
 
 1. Take a female to male jumper wire and connect the female end to a ground GPIO pin on the Raspberry Pi. Push the other end of the jumper wire into a hole on the ground rail on your breadboard like so:
 
