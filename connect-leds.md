@@ -24,7 +24,7 @@ Using a breadboard allows you to connect electronic components to each other wit
 
     ![](images/gpio-complete-circuit.png)
 
-1. Now that you have connected your first LED, adding more only requires another resistor, jumper wire and LED. In the example below three LEDs have been connected using pins 18,7,20.
+1. Now that you have connected your first LED, adding more only requires another resistor, jumper wire and LED. In the example below three LEDs have been connected using pins 18,8,20.
 
   ![](images/gpio-complete-circuit2.png)
 
