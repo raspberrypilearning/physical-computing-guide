@@ -46,7 +46,7 @@ In this example you are going to use the internal pull up resistor to make GPIO 
 
   button = 4
 
-  GPIO.setup(pin, GPIO.IN, GPIO.PUD_UP)
+  GPIO.setup(button, GPIO.IN, GPIO.PUD_UP)
 
   while True:
       button_state = GPIO.input(button)
@@ -77,7 +77,7 @@ In this example you are going to use the internal pull up resistor to make GPIO 
 
 1. Find the `GPIO.setup` line and change the last parameter from `GPIO.PUD_UP` to `GPIO.PUD_DOWN`. This sets the internal pull down resistor on GPIO 4 so that it will read `LOW` unless it's connected to 3.3 volts.
 
-  `GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)`
+  `GPIO.setup(button, GPIO.IN, GPIO.PUD_DOWN)`
 
 1. Press the **F5** key to run your new program
 
